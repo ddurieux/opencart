@@ -22,6 +22,21 @@ These instructions are for a manual installation using FTP, cPanel or other web 
 
 3. For Linux/Unix make sure the following folders and files are writeable.
 
+If you can add real rights:
+
+		chown -R www-data system/cache/
+		chown -R www-data system/logs/
+		chown -R www-data system/download/
+		chown -R www-data system/upload/
+		chown -R www-data image/
+		chown -R www-data image/cache/
+		chown -R www-data image/catalog/
+		chown -R www-data config.php
+		chown -R www-data admin/config.php
+		chown -R www-data system/modification/
+
+else, do this:
+
 		chmod 0755 or 0777 system/cache/
 		chmod 0755 or 0777 system/logs/
 		chmod 0755 or 0777 system/download/
@@ -31,6 +46,7 @@ These instructions are for a manual installation using FTP, cPanel or other web 
 		chmod 0755 or 0777 image/catalog/
 		chmod 0755 or 0777 config.php
 		chmod 0755 or 0777 admin/config.php
+		chmod 0755 or 0777 system/modification/
 
 		If 0755 does not work try 0777.
 
